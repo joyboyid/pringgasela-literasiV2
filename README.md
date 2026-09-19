@@ -16,6 +16,20 @@ npm run build
 
 Unggah isi folder `dist` ke hosting statis.
 
+## Deploy ke Vercel
+
+Konfigurasi `vercel.json` menetapkan preset **Other**, perintah build
+`npm run build`, dan output `dist`. Tidak ada dependensi yang perlu diinstal.
+Gunakan root repository sebagai **Root Directory** di Vercel.
+
+Vercel menyajikan HTML, JavaScript, dan foto sebagai aset statis. `server.mjs`
+hanya dipakai untuk pengembangan lokal; jangan arahkan request produksi ke
+server ini. Daftar galeri dibuat saat build, sehingga tidak ada penulisan file
+atau server Node yang perlu berjalan saat halaman dibuka.
+
+Setelah perubahan di-push, deploy ulang commit terbaru. Halaman yang tersedia:
+`/`, `/kegiatan.html`, dan `/galeri.html`.
+
 ## Konten dan aset
 
 - Instagram tujuan: https://www.instagram.com/pringgasela_literasi/
